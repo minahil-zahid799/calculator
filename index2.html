@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Calculator</title>
+</head>
+<body class="min-h-screen flex items-center justify-center 
+bg-gradient-to-br from-pink-300 via-purple-200 to-indigo-300">
+
+
+
+  <!-- LANDING PAGE -->
+  <div id="landing" class="text-center max-w-md ">
+    <h1 class="text-4xl font-bold mb-4">
+      A Better Way To Handle Everyday Math.
+    </h1>
+
+    <p class="text-gray-600 mb-6">Where simplicity meets functionality.
+    </p>
+
+    <button 
+      onclick="enterCalculator()"
+      class="bg-pink-500/70 hover:bg-pink-500/90 transition px-6 py-3 rounded-xl text-black text-lg">
+      Try It Now
+    </button>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div id="calculator" class="hidden">
+    <div class="bg-white p-6 shadow-xl border border-gray-200 rounded-xl ">
+        
+        <div class="mb-4"> 
+            <input type="text" id="displayed" 
+                class="w-full text-right text-2xl p-3 border-2 border-gray-300 rounded-xl bg-gray-50 hover:bg-gray-100" 
+                placeholder="0">
+        </div>
+     <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+            <button onclick="addToDisplay('1')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3  ">1</button>
+            <button onclick="addToDisplay('2')" class="  bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3 ">2</button>
+            <button onclick="addToDisplay('3')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3 ">3</button>
+            <button onclick="addToDisplay('+')" class="text-black text-xl bg-blue-500/50 hover:bg-blue-500/70 transition rounded-xl p-4 active:scale-95 hover:rotate-3 ">+</button>
+
+            <button onclick="addToDisplay('4')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3 ">4</button>
+            <button onclick="addToDisplay('5')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3  ">5</button>
+            <button onclick="addToDisplay('6')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3 ">6</button>
+            <button onclick="addToDisplay('-')" class="text-black bg-blue-500/50 hover:bg-blue-500/70 transition rounded-xl text-xl p-4 active:scale-95 hover:rotate-3 ">-</button>
+
+            <button onclick="addToDisplay('7')" class=" bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl active:scale-95 p-4 hover:rotate-3 ">7</button>
+            <button onclick="addToDisplay('8')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl active:scale-95 p-4 hover:rotate-3 ">8</button>
+            <button onclick="addToDisplay('9')" class="bg-pink-500/50 hover:bg-pink-500/70 transition rounded-xl text-black text-xl active:scale-95 p-4 hover:rotate-3 ">9</button>
+            <button onclick="addToDisplay('*')" class="bg-blue-500/50 hover:bg-blue-500/70 transition rounded-xl text-black text-xl active:scale-95  p-4 hover:rotate-3  ">x</button>
+
+            <button onclick="clearDisplay()" class="text-black text-xl rounded-xl bg-red-500/90 hover:bg-red-500/100 p-4 active:scale-95 hover:rotate-3  ">C</button>
+            <button onclick="addToDisplay('0')" class=" bg-pink-500/50 hover:bg-pink-500/70 transition text-black text-xl rounded-xl active:scale-95 p-4 hover:rotate-3  ">0</button>
+            <button onclick="calculate()" class="bg-blue-500/50 hover:bg-blue-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3  ">=</button>
+            <button onclick="addToDisplay('/')" class="bg-blue-500/50 hover:bg-blue-500/70 transition rounded-xl text-black text-xl p-4 active:scale-95 hover:rotate-3  ">/</button>
+        </div>
+  </div>
+</div>
+</body>
+<script src="app.js"></script>
+<html></html>
